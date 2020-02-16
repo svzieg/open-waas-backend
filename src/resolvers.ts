@@ -1,5 +1,15 @@
 export default {
   Query: {
-    testMessage: (): string => 'Hello World!',
-  },
+    posts: () => { return [
+      {
+        title: (): string => 'Hello World!',
+        content: (): string => 'Hello World! x100',
+      },
+      {
+        title: (): string => 'Hello World!',
+        content: (): string => 'Hello World! x100',
+      }
+    ]}
+  }
+  
 };
