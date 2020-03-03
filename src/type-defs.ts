@@ -12,7 +12,22 @@ export default gql`
       content: String!
   }
 
+
+  type Page {
+    title: String!
+    url: String!
+  }
+
   type Query {
     posts:  [Post!]
+    Pages(offset: Int, limit: Int): [Page!]
+  }
+  
+  type Mutation {
+    createPost(title: String, content:String):  Post
+  }
+
+  type Subscription {
+    postAdded: Post
   }
 `;
